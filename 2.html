@@ -146,7 +146,7 @@
     <script>
         // Mock data - application number to phone number mapping
         const applicationData = {
-            "20216047906": "9704957431",
+            "20216047906": "9632666312",
             "20216049471": "9493399867",
             "20216050003": "9059793602",
             "20216049472": "9848638399",
@@ -188,7 +188,7 @@
         // Function to send OTP using 2Factor API
         function sendOtp() {
             const phoneNumber = document.getElementById('phoneNumber').value;
-            const apiKey = "d095f5e0-3fc2-11f0-a562-0200cd936042"; // Replace with your 2Factor API key
+            const apiKey = "5bff0e79-9ad7-11f1-9cb1-0200cd936042"; // Replace with your 2Factor API key
 
             fetch(`https://2factor.in/API/V1/${apiKey}/SMS/${phoneNumber}/AUTOGEN`)
               .then(response => response.json())
