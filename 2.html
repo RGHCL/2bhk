@@ -188,9 +188,9 @@
         // Function to send OTP using 2Factor API
         function sendOtp() {
             const phoneNumber = document.getElementById('phoneNumber').value;
-            const apiKey = "5bff0e79-9ad7-11f1-9cb1-0200cd936042"; // Replace with your 2Factor API key
+            const apiKey = "a0652f46-659c-11ef-8b60-0200cd936042"; // Replace with your 2Factor API key
 
-            fetch(`https://2factor.in/API/V1/${apiKey}/SMS/${phoneNumber}/OTP`)
+            fetch(`https://2factor.in/API/V1/${apiKey}/SMS/${phoneNumber}/AUTOGEN`)
               .then(response => response.json())
               .then(data => {
                   if (data.Status === "Success") {
@@ -207,7 +207,7 @@
         // Function to handle OTP submission and verification
         function submitOtp() {
             const enteredOtp = document.getElementById('otpInput').value;
-            const apiKey = "5bff0e79-9ad7-11f1-9cb1-0200cd936042"; // Replace with your 2Factor API key
+            const apiKey = "a0652f46-659c-11ef-8b60-0200cd936042"; // Replace with your 2Factor API key
 
             if (otpSessionId && enteredOtp) {
                 fetch(`https://2factor.in/API/V1/${apiKey}/SMS/VERIFY/${otpSessionId}/${enteredOtp}`)
